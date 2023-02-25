@@ -1,4 +1,4 @@
-export type GithubUser = {
+export type GithubUserResponse = {
   name: string
   bio: string
   login: string
