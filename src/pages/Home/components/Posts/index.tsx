@@ -1,12 +1,13 @@
 
-import { useForm } from 'react-hook-form'
+import { useForm, useWatch } from 'react-hook-form'
 import * as S from './styles'
 
+import { usePosts } from '@/hooks/usePosts'
 import { debounce } from 'debounce'
+import { PostCard } from './components/PostCard'
 
 export const Posts = () => {
-
-  const { register } = useForm({
+  const { register, control } = useForm({
     defaultValues: {
       query: ""
     }
@@ -15,8 +16,8 @@ export const Posts = () => {
   const queryInputRegistration = register('query')
   const handleQueryChange = debounce(queryInputRegistration.onChange, 1000)
 
-  // const { query } = useWatch({ control })
-  // const { posts } = usePosts(query)
+  const { query } = useWatch({ control })
+  const { posts } = usePosts(query)
 
   return (
     <S.Posts>
@@ -31,6 +32,12 @@ export const Posts = () => {
         placeholder='Buscar conteúdo'
         onChange={handleQueryChange}
       />
+
+      <S.CardWrapper>
+        {posts.map(post => (
+          <PostCard post={post} key={post.id} />
+        ))}
+      </S.CardWrapper>
     </S.Posts>
   )
 }

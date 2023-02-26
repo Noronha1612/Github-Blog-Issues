@@ -4,6 +4,8 @@ export type GithubIssueResponse = {
 }
 
 export type Issue = {
+	id: number
+	title: string
 	body: string
 	repository_url: string
 	comments_url: string

@@ -3,7 +3,7 @@ import styled from "styled-components"
 export const Posts = styled.section`
   width: 100%;
 
-  header {
+  & > header {
     width: 100%;
     
     margin-bottom: 0.75rem;
@@ -12,11 +12,11 @@ export const Posts = styled.section`
     justify-content: space-between;
     align-items: center;
 
-    h1 {
+    & > h1 {
       color: ${({ theme }) => theme.baseSubtitle};
     }
 
-    span {
+    & > span {
       color: ${({ theme }) => theme.baseSpan};
     }
   }
@@ -25,6 +25,8 @@ export const Posts = styled.section`
 
 export const SearchInput = styled.input`
   width: 100%;
+
+  margin-bottom: 3rem;
   
   background-color: ${({ theme }) => theme.baseInput};
   border: 1px solid ${({ theme }) => theme.baseBorder};
@@ -43,4 +45,12 @@ export const SearchInput = styled.input`
   &:active, &:focus {
     outline: 1px solid${({ theme }) => theme.primary};
   }
+`
+
+export const CardWrapper = styled.div`
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 `
