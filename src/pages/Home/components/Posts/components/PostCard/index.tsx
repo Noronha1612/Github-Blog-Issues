@@ -1,5 +1,7 @@
 
 import { Issue } from '@/models/Issue'
+import { RouteName } from '@/routes'
+import { injectUrlParameter } from '@/utils/routing'
 import * as S from './styles'
 
 type PostCardProps = {
@@ -20,7 +22,7 @@ const parseBody = (body: string) => {
 
 export const PostCard = ({ post }: PostCardProps) => {
   return (
-    <S.CardContainer>
+    <S.CardContainer to={injectUrlParameter(RouteName.DETAILS, { id: post.id })}>
       <header>
         <h3>{post.title}</h3>
 
