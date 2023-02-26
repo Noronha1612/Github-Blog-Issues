@@ -4,12 +4,16 @@ export const Container = styled.div`
   width: 100%;
 `
 
-export const Banner = styled.div`
+export const Banner = styled.header`
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
+
+  z-index: -10;
+  
+  padding-bottom: 3rem;
 
   overflow: hidden;
 
@@ -25,4 +29,14 @@ export const Banner = styled.div`
   img {
     background-size: cover;
   }
+`
+
+export const Content = styled.main`
+  margin: 0 auto;
+  margin-top: -5rem;
+  padding: 0 2rem;
+
+  width: 100%;
+  height: 100vh;
+  max-width: 1120px;
 `
