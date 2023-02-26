@@ -1,12 +1,12 @@
 
-import { useUser } from '@/hooks/useUser'
+import { useFetchUser } from '@/hooks/useFetchUser'
 import { StyledPageCard } from '@/styles/components/PageCard'
 import { FaBuilding, FaGithub, FaShareSquare, FaUserFriends } from 'react-icons/fa'
 
 import * as S from './styles'
 
 export const UserCard = () => {
-	const { user, loading } = useUser()
+	const { user, loading } = useFetchUser()
 
 	if (loading) return <></>
 
