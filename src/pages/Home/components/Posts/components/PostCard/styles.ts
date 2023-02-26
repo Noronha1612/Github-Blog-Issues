@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import styled from "styled-components"
 
 export const CardContainer = styled(Link)`
+  text-decoration: none;
   padding: 2rem;
 
   border-radius: 10px;
@@ -18,14 +19,15 @@ export const CardContainer = styled(Link)`
     & > h3 {
       font-weight: 700;
       font-size: 1.25rem;
+      line-height: 130%;
 
       color: ${({ theme }) => theme.baseTitle};
     }
 
     & > span {
-      white-space: nowrap;
       font-size: 0.875rem;
       color: ${({ theme }) => theme.baseSpan};
+      text-align: end;
     }
   }
 
