@@ -1,4 +1,9 @@
 export type GithubIssueResponse = {
+	total_count: number
+	items: Issue[]
+}
+
+export type Issue = {
 	body: string
 	repository_url: string
 	comments_url: string

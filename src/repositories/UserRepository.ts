@@ -10,7 +10,7 @@ export class UserRepository {
     return api.get<GithubUserResponse>(`/users/${this._username}`)
   }
 
-  public static getIssues() {
-    return api.get<GithubIssueResponse[]>(`/repos/${this._username}/${this._issuesRepoName}/issues`)
+  public static getIssues(query = '') {
+    return api.get<GithubIssueResponse[]>(`/search?q=${query}repo:${this._username}/${this._issuesRepoName}`)
   }
 }
