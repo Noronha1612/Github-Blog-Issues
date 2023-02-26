@@ -1,5 +1,6 @@
 
 import { useUser } from '@/hooks/useUser'
+import { StyledPageCard } from '@/styles/components/PageCard'
 import { FaBuilding, FaGithub, FaShareSquare, FaUserFriends } from 'react-icons/fa'
 
 import * as S from './styles'
@@ -10,7 +11,7 @@ export const UserCard = () => {
 	if (loading) return <></>
 
 	return (
-		<S.Container>
+		<StyledPageCard>
 			<S.AvatarImage src={user?.avatar_url} alt="Avatar" />
 
 			<S.Content>
@@ -28,6 +29,6 @@ export const UserCard = () => {
 					<span><FaUserFriends size={18} /> {user?.followers} seguidores</span>
 				</footer>
 			</S.Content>
-		</S.Container>
+		</StyledPageCard>
 	)
 }
