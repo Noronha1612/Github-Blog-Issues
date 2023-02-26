@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const AvatarImage = styled.img`
 	max-height: 150px;
@@ -41,13 +41,6 @@ export const Content = styled.div`
 		}
 	}
 
-	footer {
-		flex: 1;
-		display: flex;
-		align-items: flex-end;
-		gap: 1.5rem;
-	}
-
 	h1 {
 		color: ${({ theme }) => theme.baseTitle};
 		font-size: 1.5rem;
@@ -56,16 +49,5 @@ export const Content = styled.div`
 	p {
 		color: ${({ theme }) => theme.baseText};
 		font-size: 1rem;
-	}
-	span {
-		display: flex;
-		gap: 0.5rem;
-		align-items: center;
-		color: ${({ theme }) => theme.baseSubtitle};
-		font-size: 1rem;
-
-		svg {
-			color: ${({ theme }) => theme.baseLabel};
-		}
 	}
 `

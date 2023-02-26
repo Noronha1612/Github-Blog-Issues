@@ -1,6 +1,6 @@
-import { GithubRepository } from "@/repositories/GithubRepository"
-import { useQuery } from "react-query"
-import { QueryKey } from "./QueryKey"
+import { GithubRepository } from '@/repositories/GithubRepository'
+import { useQuery } from 'react-query'
+import { QueryKey } from './QueryKey'
 
 export const useFetchPosts = (query?: string) => {
   const { data: response, isLoading } = useQuery([QueryKey.GetPosts, query], () => GithubRepository.getIssues(query), {

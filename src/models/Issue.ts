@@ -7,8 +7,8 @@ export type Issue = {
 	id: number
 	title: string
 	body: string
-	repository_url: string
-	comments_url: string
+	html_url: string
+	comments: number
 	created_at: string
 	user: {
 		login: string

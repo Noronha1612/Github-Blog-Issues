@@ -1,9 +1,8 @@
 
 import { Issue } from '@/models/Issue'
 import { RouteName } from '@/routes'
+import { formatDistanceToNowPtBr } from '@/utils/dateFormat'
 import { injectUrlParameter } from '@/utils/routing'
-import { formatDistance } from 'date-fns'
-import locale_ptBr from 'date-fns/locale/pt-BR'
 import * as S from './styles'
 
 type PostCardProps = {
@@ -28,9 +27,7 @@ export const PostCard = ({ post }: PostCardProps) => {
       <header>
         <h3>{post.title}</h3>
 
-        <span>{formatDistance(new Date(post.created_at), new Date, {
-          locale: locale_ptBr
-        })}</span>
+        <span>{formatDistanceToNowPtBr(new Date(post.created_at))}</span>
       </header>
 
       <S.Content>{parseBody(post.body)}</S.Content>
