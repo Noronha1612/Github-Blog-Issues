@@ -37,6 +37,9 @@ export const Content = styled.main`
   padding: 0 2rem;
 
   width: 100%;
-  height: 100vh;
   max-width: 1120px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
 `

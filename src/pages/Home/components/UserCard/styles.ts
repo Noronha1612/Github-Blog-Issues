@@ -44,6 +44,10 @@ export const Content = styled.div`
 			display: flex;
 			gap: 0.5rem;
 			align-items: center;
+
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 
