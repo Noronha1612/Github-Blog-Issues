@@ -6,4 +6,5 @@ export type GithubUserResponse = {
   followers: number
   avatar_url: string
   repos_url: string
+  html_url: string
 }
