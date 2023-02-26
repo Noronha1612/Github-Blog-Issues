@@ -11,6 +11,6 @@ export class GithubRepository {
   }
 
   public static getIssues(query = '') {
-    return api.get<GithubIssueResponse[]>(`/search?q=${query}repo:${ENV_USERNAME}/${ENV_ISSUE_REPO_NAME}`)
+    return api.get<GithubIssueResponse>(`/search/issues?q=${query}repo:${ENV_USERNAME}/${ENV_ISSUE_REPO_NAME}`)
   }
 }

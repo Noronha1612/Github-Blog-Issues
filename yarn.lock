@@ -646,6 +646,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/debounce@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "@types/debounce@npm:1.2.1"
+  checksum: bea6d414acefbee50adfe87cee10f8a855d033e4778567ab03bdc3cb2648b6bf9237ca53f4ee76fe4be75f77f86d4688411499626fe409bc870f53631d24231f
+  languageName: node
+  linkType: hard
+
 "@types/debug@npm:^4.0.0":
   version: 4.1.7
   resolution: "@types/debug@npm:4.1.7"
@@ -2123,6 +2130,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "github-blog@workspace:."
   dependencies:
+    "@types/debounce": ^1.2.1
     "@types/node": ^18.14.0
     "@types/react": ^18.0.27
     "@types/react-dom": ^18.0.10
@@ -2136,6 +2144,7 @@ __metadata:
     eslint-plugin-react: ^7.32.2
     react: ^18.2.0
     react-dom: ^18.2.0
+    react-hook-form: ^7.43.2
     react-icons: ^4.7.1
     react-markdown: ^8.0.5
     react-query: ^3.39.3
@@ -3680,6 +3689,15 @@ __metadata:
   peerDependencies:
     react: ^18.2.0
   checksum: 7d323310bea3a91be2965f9468d552f201b1c27891e45ddc2d6b8f717680c95a75ae0bc1e3f5cf41472446a2589a75aed4483aee8169287909fcd59ad149e8cc
+  languageName: node
+  linkType: hard
+
+"react-hook-form@npm:^7.43.2":
+  version: 7.43.2
+  resolution: "react-hook-form@npm:7.43.2"
+  peerDependencies:
+    react: ^16.8.0 || ^17 || ^18
+  checksum: 68d4fb73fec052801d5e7840c3d0afba887676acfdefa33aef342ead0db419cb1a14a0891ed567cea58a78d544d9245445c593e25bc0564a797201cb32c91a01
   languageName: node
   linkType: hard
 

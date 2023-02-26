@@ -1,3 +1,4 @@
 export enum QueryKey {
-  GetUserData = "@github-blog-issues/get-user-data"
+  GetUserData = "@github-blog-issues/get-user-data",
+  GetPosts = "@github-blog-issues/get-posts"
 }
