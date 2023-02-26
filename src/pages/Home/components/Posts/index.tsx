@@ -1,13 +1,14 @@
 
-import { useForm, useWatch } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 import * as S from './styles'
 
-import { usePosts } from '@/hooks/usePosts'
+import { usePosts } from '@/contexts/Posts'
 import { debounce } from 'debounce'
+import { useEffect } from 'react'
 import { PostCard } from './components/PostCard'
 
 export const Posts = () => {
-  const { register, control } = useForm({
+  const { register, watch } = useForm({
     defaultValues: {
       query: ""
     }
@@ -16,8 +17,12 @@ export const Posts = () => {
   const queryInputRegistration = register('query')
   const handleQueryChange = debounce(queryInputRegistration.onChange, 1000)
 
-  const { query } = useWatch({ control })
-  const { posts } = usePosts(query)
+  const { query } = watch()
+  const { posts, updateQuery } = usePosts()
+
+  useEffect(() => {
+    updateQuery(query)
+  }, [query, updateQuery])
 
   return (
     <S.Posts>
